@@ -16,3 +16,7 @@ Text Domain: sast-theme
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+html {
+    font-size: 62.5%; /* 10px browser default */
+}
