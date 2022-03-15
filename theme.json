@@ -1,6 +1,7 @@
 {    
     "version": 2,
     "settings": {
+        "appearanceTools": true,
         "color": {
             "palette": [
                 {
@@ -38,7 +39,109 @@
         "layout": {
 			"contentSize": "1200px",
 			"wideSize": "1200px"
-		}        
+		},
+        "typography": {
+            "dropCap": false,
+            "fontFamilies": [
+                {
+                    "fontFamily": "\"Open Sans\", sans-serif",
+                    "name": "Open Sans",
+                    "slug": "open-sans"
+                },
+                {
+                    "fontFamily": "Raleway, sans-serif",
+                    "name": "Raleway",
+                    "slug": "raleway"
+                },
+                {
+                    "fontFamily": "Montserrat, sans-serif",
+                    "name": "Montserrat",
+                    "slug": "montserrat"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "size": "1.4rem",
+                    "slug": "small"
+                },
+                {
+                    "size": "1.6rem",
+                    "slug": "normal"
+                },
+                {
+                    "size": "2rem",
+                    "slug": "medium"
+                },
+                {
+                    "size": "2.4rem",
+                    "slug": "large"
+                },
+                {
+                    "size": "3.6rem",
+                    "slug": "x-large"
+                }
+            ]
+        },
+        "spacing": {
+            "units": [
+                "px",
+                "rem",
+                "vh",
+                "vw",
+                "%"
+            ]
+        },
+        "custom": {
+            "lineHeight": {
+                "body": 1.625,
+                "heading": 1.1
+            }
+        }       
+    },
+    "styles": {
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--open-sans)",
+            "lineHeight": "var(--wp--custom--line-height--body)",
+            "fontSize": "var(--wp--preset--font-size--normal)"
+        },
+        "elements": {
+            "h1": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--raleway)",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--raleway)",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--raleway)",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--raleway)",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--raleway)",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--raleway)",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            }
+        }
     },
     "templateParts": [
         {
