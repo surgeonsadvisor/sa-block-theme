@@ -1,15 +1,13 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
 <!-- wp:group {"tagName":"main"} -->
-<main class="wp-block-group content"><!-- wp:group {"layout":{"inherit":true}} -->
-<header class="wp-block-group entry-header"><!-- wp:post-title {"level":1,"align":"wide"} /-->
-
-</header>
+<main class="wp-block-group content"><!-- wp:group {"tagName":"header","className":"entry-header","layout":{"inherit":true}} -->
+<header class="wp-block-group entry-header"><!-- wp:post-title /--></header>
 <!-- /wp:group -->
 
 <!-- wp:post-content {"layout":{"inherit":true}} /-->
 
 </main>
 <!-- /wp:group -->
-
+<!-- wp:template-part {"slug":"before-footer"} /-->
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
