@@ -148,7 +148,12 @@
             "name": "header",
             "title": "Header",
             "area": "header"
-        },        
+        },
+        {
+            "name": "before-footer",
+            "title": "Before footer",
+            "area": "before-footer"
+        },    
         {
             "name": "footer",
             "title": "Footer",
