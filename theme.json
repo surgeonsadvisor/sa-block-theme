@@ -61,23 +61,23 @@
             ],
             "fontSizes": [
                 {
-                    "size": "1.4rem",
+                    "size": "14px",
                     "slug": "small"
                 },
                 {
-                    "size": "1.6rem",
+                    "size": "16px",
                     "slug": "normal"
                 },
                 {
-                    "size": "2rem",
+                    "size": "20px",
                     "slug": "medium"
                 },
                 {
-                    "size": "2.4rem",
+                    "size": "24px",
                     "slug": "large"
                 },
                 {
-                    "size": "3.6rem",
+                    "size": "36px",
                     "slug": "x-large"
                 }
             ]
