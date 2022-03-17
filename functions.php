@@ -27,7 +27,8 @@ add_action( 'after_setup_theme', 'sast_theme_setup' );
  * Enqueue theme scripts and styles.
  */
 function sast_theme_styles_scripts() {
-    wp_enqueue_style( 'sast-style', get_stylesheet_uri() );
+    
+    wp_enqueue_style( 'sast-main-style', get_stylesheet_directory_uri( )."/dist/main.css", array(), SA_BLOCK_THEME_VERSION );
     wp_enqueue_style( 'sast-fonts', "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap", array(), SA_BLOCK_THEME_VERSION );
 
 }
