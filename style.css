@@ -20,3 +20,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 html {
     font-size: 62.5%; /* 10px browser default */
 }
+
+.mobile-header {
+    display: none;
+}
