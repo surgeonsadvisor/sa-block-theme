@@ -150,6 +150,11 @@
             "area": "header"
         },
         {
+            "name": "mobile-header",
+            "title": "Mobile Header",
+            "area": "header"
+        },
+        {
             "name": "before-footer",
             "title": "Before Footer",
             "area": "before-footer"
