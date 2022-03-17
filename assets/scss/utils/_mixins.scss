@@ -1,0 +1,21 @@
+@mixin containerPadding( $hPadding: 5%, $vPaddingMobile: 45px, $vPaddingDesktop: 90px ) {
+    padding: $vPaddingMobile $hPadding;
+
+    @media only screen and ( min-width: 1025px ) {
+        padding-top: $vPaddingDesktop;
+        padding-bottom: $vPaddingDesktop;
+    }
+
+    @media only screen and ( min-width: ($wrap-width + 30px) ) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+@mixin alignFull() {
+  margin: 0 calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
+  overflow: hidden;
+}
