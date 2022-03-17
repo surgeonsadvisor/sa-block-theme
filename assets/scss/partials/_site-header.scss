@@ -1,0 +1,25 @@
+.site-header {
+
+    .wp-block-columns {
+        margin-bottom: 0;
+    }
+    @media only screen and ( max-width: 1024px ) {
+        margin-top: 0;
+        min-height: 100vh;
+
+        .wp-block-site-logo {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .wp-block-navigation {
+            border: 3px solid red;
+            display: block;
+
+            &__container {
+                display: block;
+            }
+        }
+
+    }
+}
