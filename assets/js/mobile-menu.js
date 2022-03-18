@@ -40,26 +40,19 @@ if (openNav) {
     } );
 }
 
-const mediaQuery = '(max-width: 1024px)';
-const mediaQueryList = window.matchMedia(mediaQuery);
+for (let i = 0; i < itemHasChildren.length; i++) {
 
-mediaQueryList.addEventListener('change', e => {
-  if (e.matches) {
-    for (let i = 0; i < itemHasChildren.length; i++) {
+    itemHasChildren[i].children[1].addEventListener("click", function (e) {
+            
+        let $parentElement = this.parentElement;
+        toggleClassJS($parentElement, "is-active");
+        let $siblings = getSiblings($parentElement);
 
-        itemHasChildren[i].children[1].addEventListener("click", function (e) {
-                
-            let $parentElement = this.parentElement;
-            toggleClassJS($parentElement, "is-active");
-            let $siblings = getSiblings($parentElement);
-    
-            for (let j = 0; j < $siblings.length; j++) {
-    
-                if ($siblings[j].classList.contains("is-active")) {
-                    $siblings[j].classList.remove("is-active");
-                }
+        for (let j = 0; j < $siblings.length; j++) {
+
+            if ($siblings[j].classList.contains("is-active")) {
+                $siblings[j].classList.remove("is-active");
             }
-        });
-    }
-  } 
-})
+        }
+    });
+}

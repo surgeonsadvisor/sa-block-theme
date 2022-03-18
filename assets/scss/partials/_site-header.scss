@@ -36,19 +36,16 @@
             &__submenu-container {
                 display: block;
                 border: 0 !important;
-                position: relative;
-                visibility: visible;
-                overflow: visible;
-                opacity: 1;
-                width: 100%;
+                opacity: 0;
+                width: 100% !important;
                 height: auto;
                 padding: 0;
-                position: absolute;
+                position: relative;
                 clip: rect(0,0,0,0);
-                height: 1px;
+                height: 1px !important;
                 width: 1px;
                 border: 0;
-                overflow: hidden;
+                overflow: hidden !important;
                 word-wrap: normal;
             }
 
@@ -74,14 +71,26 @@
                         margin-left: 0;
                         width: 50px;
                         min-height: 50px;
-                        border-bottom: 1px solid #e4e4e4;
-                        
+                        border-bottom: 1px solid #e4e4e4;                   
 
                         svg {
                             width: 24px;
                             height: 24px;
                             transform: rotate(-90deg);
                             stroke: #999999;
+                            transition: transform 0.8s ease;
+                        }
+
+                        &[aria-expanded="true"]{
+                            svg {
+                                transform: rotate(0);
+                            }
+
+                            & +.wp-block-navigation__submenu-container {
+                                position: relative;
+                                height: auto !important;
+                                overflow: auto !important;
+                            }
                         }
                     }
                 }
