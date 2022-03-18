@@ -21,7 +21,11 @@
             width: 1px;
             border: 0;
             overflow: hidden !important;
-            word-wrap: normal;
+            word-wrap: normal;            
+            top: unset !important;
+            right: unset !important;            
+            bottom: unset !important;
+            left: unset !important;
         }
 
         &-item {
