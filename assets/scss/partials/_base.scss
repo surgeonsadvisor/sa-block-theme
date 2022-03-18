@@ -1,7 +1,19 @@
 body {
     &.is-active {
-        overflow: hidden;
+
+        @media only screen and ( max-width: 1024px ) {
+            overflow: hidden;
+        }       
     }
+}
+
+main {
+    @include containerPadding( $vPaddingMobile:0, $vPaddingDesktop: 0 );
+
+    @media only screen and ( max-width: 1024px ) {
+        margin-top: 48px !important;
+    }
+
 }
 
 .mobile-background-menu {
