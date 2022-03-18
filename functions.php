@@ -31,5 +31,7 @@ function sast_theme_styles_scripts() {
     wp_enqueue_style( 'sast-main-style', get_stylesheet_directory_uri( )."/dist/main.css", array(), SA_BLOCK_THEME_VERSION );
     wp_enqueue_style( 'sast-fonts', "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap", array(), SA_BLOCK_THEME_VERSION );
 
+    wp_enqueue_script( 'sast-mobile-menu', get_stylesheet_directory_uri()."/dist/mobile-menu.js", array(), SA_BLOCK_THEME_VERSION, true );
+
 }
 add_action( 'wp_enqueue_scripts', 'sast_theme_styles_scripts' );
