@@ -26,9 +26,12 @@ function getSiblings(n) {
     return getChildren(n.parentNode.firstChild, n);
 }
 
+
+//* Mobile menu animation
 let $body = document.querySelector("body");
 let siteHeader = document.querySelector( ".site-header" );
 let openNav = document.querySelector(".open-nav");
+let itemHasChildren = document.querySelectorAll(".site-header .wp-block-navigation .wp-block-navigation-item.has-child");
 
 if (openNav) {
     openNav.addEventListener( "click", function() {
@@ -36,3 +39,27 @@ if (openNav) {
         siteHeader.classList.add("is-active");
     } );
 }
+
+const mediaQuery = '(max-width: 1024px)';
+const mediaQueryList = window.matchMedia(mediaQuery);
+
+mediaQueryList.addEventListener('change', e => {
+  if (e.matches) {
+    for (let i = 0; i < itemHasChildren.length; i++) {
+
+        itemHasChildren[i].children[1].addEventListener("click", function (e) {
+                
+            let $parentElement = this.parentElement;
+            toggleClassJS($parentElement, "is-active");
+            let $siblings = getSiblings($parentElement);
+    
+            for (let j = 0; j < $siblings.length; j++) {
+    
+                if ($siblings[j].classList.contains("is-active")) {
+                    $siblings[j].classList.remove("is-active");
+                }
+            }
+        });
+    }
+  } 
+})
