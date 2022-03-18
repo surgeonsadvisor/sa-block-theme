@@ -1,0 +1,32 @@
+body {
+    &.is-active {
+
+        @media only screen and ( max-width: 1024px ) {
+            overflow: hidden;
+        }       
+    }
+}
+
+main {
+    @include containerPadding( $vPaddingMobile:0, $vPaddingDesktop: 0 );
+
+    @media only screen and ( max-width: 1024px ) {
+        margin-top: 48px !important;
+    }
+
+}
+
+.mobile-background-menu {
+    &.is-active {
+
+        @media only screen and ( max-width: 1024px ) {
+            position: fixed;
+            background-color: rgba($color: #000000, $alpha: .5);
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+        }   
+    }
+}

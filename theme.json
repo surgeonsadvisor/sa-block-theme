@@ -95,6 +95,10 @@
             "lineHeight": {
                 "body": 1.625,
                 "heading": 1.1
+            },
+            "color": {
+                "ico--phone": "#00ff0c",
+                "ico--mail": "#00baff"
             }
         }       
     },
@@ -150,9 +154,14 @@
             "area": "header"
         },
         {
+            "name": "mobile-header",
+            "title": "Mobile Header",
+            "area": "header"
+        },
+        {
             "name": "before-footer",
             "title": "Before Footer",
-            "area": "before-footer"
+            "area": "footer"
         },    
         {
             "name": "footer",
