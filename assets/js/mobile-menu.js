@@ -31,12 +31,14 @@ function getSiblings(n) {
 let $body = document.querySelector("body");
 let siteHeader = document.querySelector( ".site-header" );
 let openNav = document.querySelector(".open-nav");
+let mobileBackgroundMenu = document.querySelector( ".mobile-background-menu" );
 let itemHasChildren = document.querySelectorAll(".site-header .wp-block-navigation .wp-block-navigation-item.has-child");
 
 if (openNav) {
     openNav.addEventListener( "click", function() {
         $body.classList.add( "is-active" );
         siteHeader.classList.add("is-active");
+        mobileBackgroundMenu.classList.add( "is-active" );
     } );
 }
 
