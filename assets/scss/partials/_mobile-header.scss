@@ -1,5 +1,8 @@
 .mobile-header {    
     @include containerPadding( $vPaddingMobile: 0 );
+    position: fixed;
+    top: 0;
+    width: 100vw;
 
     &__wrapper {
         min-height: 48px;

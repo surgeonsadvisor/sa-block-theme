@@ -7,7 +7,7 @@ module.exports = {
         './assets/scss/main.scss'
     ],
     output: {
-        filename: 'main.js',
+        filename: 'mobile-menu.js',
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
