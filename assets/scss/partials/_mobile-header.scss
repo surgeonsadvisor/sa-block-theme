@@ -37,6 +37,12 @@
     .border-circle {
         width: 32px;
         height: 32px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
     }
 
     @media only screen and ( min-width: 1025px ) {
