@@ -3,6 +3,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 9999;
 
     &__wrapper {
         min-height: 48px;
