@@ -3,8 +3,20 @@
     &__link {
         font-size: var(--wp--preset--font-size--normal);        
     }
-    
-    &.aligncenter {
-        text-align: center;
+
+    &.is-style-square > .wp-block-button__link, .wp-block-button__link.is-style-square,
+    &.is-style-square-outline > .wp-block-button__link, .wp-block-button__link.is-style-square-outline {
+        border-radius: 0;
+    }
+
+    &.is-style-square-outline > .wp-block-button__link:not(.has-background),
+    .wp-block-button__link.is-style-square-outline:not(.has-background) {
+        background-color: transparent;
+        border: 2px solid currentColor;
+    }
+
+    &.is-style-square-outline > .wp-block-button__link:not(.has-text-color),
+    .wp-block-button__link.is-style-square-outline:not(.has-text-color){
+        color: currentColor;
     }
 }

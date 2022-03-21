@@ -4,7 +4,8 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
     entry: [
         './assets/js/mobile-menu.js',
-        './assets/scss/main.scss'
+        './assets/scss/main.scss',
+        './assets/scss/admin.scss'
     ],
     output: {
         filename: 'mobile-menu.js',
