@@ -1,0 +1,11 @@
+.wp-block-post-author {
+    p {
+        font-size: var(--wp--preset--font-size--small);
+        display: inline-block;
+        width: auto;
+    }
+
+    &__name {
+        margin-left: 5px;
+    }
+}
