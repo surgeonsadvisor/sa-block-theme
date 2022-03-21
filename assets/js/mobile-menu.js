@@ -31,6 +31,7 @@ function getSiblings(n) {
 let $body = document.querySelector("body");
 let siteHeader = document.querySelector( ".site-header" );
 let openNav = document.querySelector(".open-nav");
+let closeNav = document.querySelector(".close-nav");
 let mobileBackgroundMenu = document.querySelector( ".mobile-background-menu" );
 let itemHasChildren = document.querySelectorAll(".site-header .wp-block-navigation .wp-block-navigation-item.has-child");
 
@@ -39,6 +40,14 @@ if (openNav) {
         $body.classList.add( "is-active" );
         siteHeader.classList.add("is-active");
         mobileBackgroundMenu.classList.add( "is-active" );
+    } );
+}
+
+if (closeNav) {
+    closeNav.addEventListener( "click", function(){
+        $body.classList.remove( "is-active" );
+        siteHeader.classList.remove( "is-active" );
+        mobileBackgroundMenu.classList.remove( "is-active" );
     } );
 }
 
