@@ -1,0 +1,15 @@
+.wp-block-navigation {
+    &.items-justified-right {
+        .wp-block-navigation__container {
+            .has-child {
+                .wp-block-navigation__submenu-container {
+                    left: 0;
+
+                    .wp-block-navigation__submenu-container {
+                        left: 200px;
+                    }
+                }
+            } 
+        } 
+    }
+}
