@@ -1,4 +1,6 @@
 .wp-block-post-author {
+    margin-top: 0;
+    margin-bottom: var(--wp--style--block-gap);
     p {
         font-size: var(--wp--preset--font-size--small);
         display: inline-block;

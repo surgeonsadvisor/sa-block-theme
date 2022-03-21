@@ -1,0 +1,10 @@
+.wp-block-button {
+
+    &__link {
+        font-size: var(--wp--preset--font-size--normal);        
+    }
+    
+    &.aligncenter {
+        text-align: center;
+    }
+}
