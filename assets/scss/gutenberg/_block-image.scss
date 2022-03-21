@@ -1,0 +1,27 @@
+.wp-block-image {
+
+    figcaption {
+        text-align: center;
+    } 
+
+    @media only screen and ( max-width: 767px ) {
+
+        margin-top: var(--wp--style--block-gap);
+
+        > .alignleft,
+        > .alignright {
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+figure {
+
+    @media only screen and ( max-width: 767px ) {
+        &.wp-block-image {
+            text-align: center;
+        }
+    }    
+}
