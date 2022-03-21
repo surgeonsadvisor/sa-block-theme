@@ -1,0 +1,16 @@
+.single-post {
+    
+    .before-footer {
+        margin-top: var(--wp--style--block-gap);
+    }
+
+    .wp-block-post-featured-image {
+        margin-bottom: var(--wp--style--block-gap);
+        text-align: center;
+
+        img {
+            width: auto;
+            max-width: auto;
+        }
+    }
+}
