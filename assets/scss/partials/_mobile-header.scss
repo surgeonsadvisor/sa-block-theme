@@ -119,7 +119,13 @@
     justify-content: center;
     align-items: center;
     border: 2px solid currentColor;
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
 }

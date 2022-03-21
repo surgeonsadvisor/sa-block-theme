@@ -1,0 +1,5 @@
+.before-footer {
+    > .wp-block-group {
+        @include containerPadding( $vPaddingDesktop: 60px, $vPaddingMobile: 60px );
+    }   
+}
