@@ -52,7 +52,7 @@ if (closeNav) {
     } );
 }
 
-/* for (let i = 0; i < itemHasChildren.length; i++) {
+for (let i = 0; i < itemHasChildren.length; i++) {
 
     itemHasChildren[i].children[1].addEventListener("click", function (e) {
             
@@ -67,18 +67,4 @@ if (closeNav) {
             }
         }
     });
-} */
-
-for (let i = 0; i < buttonSubmenuToggleAll.length; i++) {
-    const buttonSubmenuToggle = buttonSubmenuToggleAll[i];
-
-    buttonSubmenuToggle.addEventListener( "click", function(e){
-        const ariaStatus = this.getAttribute("aria-expanded");
-        
-        if (ariaStatus) {
-            this.parentElement.classList.toggle( "is-active" );
-        } 
-
-    } );
-    
 }
