@@ -34,6 +34,7 @@ let openNav = document.querySelector(".open-nav");
 let closeNav = document.querySelector(".close-nav");
 let mobileBackgroundMenu = document.querySelector( ".mobile-background-menu" );
 let itemHasChildren = document.querySelectorAll(".site-header .wp-block-navigation .wp-block-navigation-item.has-child");
+let buttonSubmenuToggleAll = document.querySelectorAll( ".wp-block-navigation-submenu__toggle" );
 
 if (openNav) {
     openNav.addEventListener( "click", function() {
@@ -51,7 +52,7 @@ if (closeNav) {
     } );
 }
 
-for (let i = 0; i < itemHasChildren.length; i++) {
+/* for (let i = 0; i < itemHasChildren.length; i++) {
 
     itemHasChildren[i].children[1].addEventListener("click", function (e) {
             
@@ -66,4 +67,18 @@ for (let i = 0; i < itemHasChildren.length; i++) {
             }
         }
     });
+} */
+
+for (let i = 0; i < buttonSubmenuToggleAll.length; i++) {
+    const buttonSubmenuToggle = buttonSubmenuToggleAll[i];
+
+    buttonSubmenuToggle.addEventListener( "click", function(e){
+        const ariaStatus = this.getAttribute("aria-expanded");
+        
+        if (ariaStatus) {
+            this.parentElement.classList.toggle( "is-active" );
+        } 
+
+    } );
+    
 }
