@@ -123,6 +123,7 @@
                         > .wp-block-navigation-item {
                             > a {
                                 padding-left: 35px;
+                                width: calc(100% - 100px);
                             }
                         }
                     }
