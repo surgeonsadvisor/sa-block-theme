@@ -1,4 +1,5 @@
 .site-header {
+    @include clearFloat;
 
     .wp-block-columns {
         margin-bottom: 0;

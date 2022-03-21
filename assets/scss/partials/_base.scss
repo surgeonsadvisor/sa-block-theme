@@ -11,9 +11,13 @@ main {
     @include containerPadding( $vPaddingMobile:0, $vPaddingDesktop: 0 );
 
     @media only screen and ( max-width: 1024px ) {
-        margin-top: 48px !important;
+        margin-top: calc( 48px + var(--wp--style--block-gap) ) !important;
     }
 
+}
+
+figure {
+    margin: 0;
 }
 
 .mobile-background-menu {

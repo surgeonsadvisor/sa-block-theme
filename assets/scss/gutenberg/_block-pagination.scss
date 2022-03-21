@@ -1,0 +1,36 @@
+.post-nav-links {
+    @include clearFloat;
+}
+
+.wp-block-query-pagination {
+    @include clearFloat;
+    margin: 40px 0;
+    
+    .page-numbers,
+    .wp-block-query-pagination-next,
+    .wp-block-query-pagination-previous {
+        background-color: var(--wp--preset--color--color-6);
+        color: var(--wp--preset--color--color-5);
+        cursor: pointer;
+        display: inline-block;
+        font-size: var(--wp--preset--font-size--small);
+        margin-right: 5px;
+        padding: 12px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--wp--preset--color--color-1);
+          color: var(--wp--preset--color--color-5);
+        }
+
+        &:focus {
+          background-color: var(--wp--preset--color--color-1);
+          color: var(--wp--preset--color--color-5);
+        }
+
+        &.current {
+            background-color: var(--wp--preset--color--color-1);
+            color: var(--wp--preset--color--color-5);
+        }
+      }
+}

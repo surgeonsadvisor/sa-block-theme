@@ -19,3 +19,13 @@
   width: 100vw;
   overflow: hidden;
 }
+
+
+@mixin clearFloat() {
+    &:before,
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+    }
+}
