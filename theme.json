@@ -170,6 +170,11 @@
             "area": "header"
         },
         {
+            "name": "header-centered-logo",
+            "title": "Header With Centered Logo",
+            "area": "header"
+        },
+        {
             "name": "mobile-header",
             "title": "Mobile Header",
             "area": "header"
