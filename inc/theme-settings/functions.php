@@ -11,4 +11,3 @@ function sast_only_administrators($cmb) {
     return $is_admin;
 
 }
-add_action( 'wp_head', 'sast_only_administrators', 10, 0 );
