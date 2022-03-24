@@ -1,7 +1,5 @@
 <?php
 
-add_action( 'cmb2_admin_init', 'sast_page_options' );
-
 function sast_page_options() {
 
 	$cmb = new_cmb2_box( array(
@@ -11,7 +9,7 @@ function sast_page_options() {
 		'context'       => 'normal',
 		'priority'      => 'high',
 		'show_names'    => true,
-        'show_on_cb'    => 'sast_only_administrators'
+        'show_on_cb'    => ''
 	) );
 
     $cmb->add_field( array(
@@ -30,6 +28,8 @@ function sast_page_options() {
     ) );
 
 }
+
+add_action( 'cmb2_admin_init', 'sast_page_options' );
 
 function sast_output_header_scripts_ind() {
 

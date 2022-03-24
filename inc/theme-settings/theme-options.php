@@ -13,8 +13,7 @@ function sast_register_theme_settings_metabox() {
 		'object_types' => array( 'options-page' ),
 		'option_key'   => 'sast_general_options',
 		'tab_group'    => 'sast_general_options',
-		'tab_title'    => __('General', 'sast_block_theme'),
-        'show_on_cb'   => 'sast_only_administrators'
+		'tab_title'    => __('General', 'sast_block_theme')
 	);
 
 	if ( version_compare( CMB2_VERSION, '2.4.0' ) ) {
@@ -26,16 +25,14 @@ function sast_register_theme_settings_metabox() {
     $general_options->add_field( array(
         'name' => __( 'Header Scripts', 'sast_block_theme'),
         'desc' => __( 'Output before the closing <code>head</code> tag, after sitewide header scripts.', 'sast_block_theme'),
-        'id' => 'sast_scripts_header_ind',
+        'id' => 'sast_scripts_header',
         'type' => 'textarea_code',
-        'options' => array( 'disable_codemirror' => true ),
     ) );
 
     $general_options->add_field( array(
         'name' => __('Footer Scripts', 'sast_block_theme'),
-        'id' => 'sast_scripts_footer_ind',
+        'id' => 'sast_scripts_footer',
         'type' => 'textarea_code',
-        'options' => array( 'disable_codemirror' => true ),
     ) );
 
 }
@@ -90,3 +87,23 @@ function sast_options_page_tabs( $cmb_options ) {
 
 	return $tabs;
 }
+
+function sast_get_theme_settings_scripts_header(){
+
+    $settings = get_option( 'sast_general_options', array() );
+
+    if (!empty($settings['sast_scripts_header'])) {
+        echo $settings['sast_scripts_header'];
+    }
+}
+add_action( 'wp_head', 'sast_get_theme_settings_scripts_header', 10, 0 );
+
+function sast_get_theme_settings_scripts_footer(){
+
+    $settings = get_option( 'sast_general_options', array() );
+
+    if (!empty($settings['sast_scripts_footer'])) {
+        echo $settings['sast_scripts_footer'];
+    }
+}
+add_action( 'wp_head', 'sast_get_theme_settings_scripts_footer', 10, 0 );
