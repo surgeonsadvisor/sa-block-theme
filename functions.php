@@ -49,3 +49,9 @@ function sast_theme_customize_gutenberg_blocks() {
 	
 }
 add_action( 'enqueue_block_editor_assets', 'sast_theme_customize_gutenberg_blocks' );
+
+
+//* CMB2
+if ( file_exists( __DIR__.'/vendor/cmb2/init.php' ) ) {
+    require_once __DIR__.'/vendor/cmb2/init.php';
+}
