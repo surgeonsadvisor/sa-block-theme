@@ -56,4 +56,5 @@ if ( file_exists( __DIR__.'/vendor/cmb2/init.php' ) ) {
     require_once __DIR__.'/vendor/cmb2/init.php';
 }
 
+include_once( __DIR__.'/inc/theme-settings/functions.php' );
 include_once( __DIR__.'/inc/theme-settings/page-options.php' );
