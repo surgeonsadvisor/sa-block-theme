@@ -2,101 +2,44 @@
 /**
  * Hook in and register a metabox to handle a theme options page and adds a menu item.
  */
-function sast_register_main_options_metabox() {
+function sast_register_theme_settings_metabox() {
 
 	/**
 	 * Registers main options page menu item and form.
 	 */
 	$args = array(
-		'id'           => 'sast_main_options_page',
-		'title'        => 'Theme Settings',
+		'id'           => 'sast_general_options_page',
+		'title'        => __('Theme Settings', 'sast_block_theme'),
 		'object_types' => array( 'options-page' ),
-		'option_key'   => 'sast_main_options',
-		'tab_group'    => 'sast_main_options',
-		'tab_title'    => 'Main',
+		'option_key'   => 'sast_general_options',
+		'tab_group'    => 'sast_general_options',
+		'tab_title'    => __('General', 'sast_block_theme'),
+        'show_on_cb'   => 'sast_only_administrators'
 	);
 
-	// 'tab_group' property is supported in > 2.4.0.
 	if ( version_compare( CMB2_VERSION, '2.4.0' ) ) {
 		$args['display_cb'] = 'sast_options_display_with_tabs';
 	}
 
-	$main_options = new_cmb2_box( $args );
+	$general_options = new_cmb2_box( $args );
 
-	/**
-	 * Options fields ids only need
-	 * to be unique within this box.
-	 * Prefix is not needed.
-	 */
-	$main_options->add_field( array(
-		'name'    => 'Site Background Color',
-		'desc'    => 'field description (optional)',
-		'id'      => 'bg_color',
-		'type'    => 'colorpicker',
-		'default' => '#ffffff',
-	) );
+    $general_options->add_field( array(
+        'name' => __( 'Header Scripts', 'sast_block_theme'),
+        'desc' => __( 'Output before the closing <code>head</code> tag, after sitewide header scripts.', 'sast_block_theme'),
+        'id' => 'sast_scripts_header_ind',
+        'type' => 'textarea_code',
+        'options' => array( 'disable_codemirror' => true ),
+    ) );
 
-	/**
-	 * Registers secondary options page, and set main item as parent.
-	 */
-	$args = array(
-		'id'           => 'sast_secondary_options_page',
-		'menu_title'   => 'Secondary Options', // Use menu title, & not title to hide main h2.
-		'object_types' => array( 'options-page' ),
-		'option_key'   => 'sast_secondary_options',
-		'parent_slug'  => 'sast_main_options',
-		'tab_group'    => 'sast_main_options',
-		'tab_title'    => 'Secondary',
-	);
-
-	// 'tab_group' property is supported in > 2.4.0.
-	if ( version_compare( CMB2_VERSION, '2.4.0' ) ) {
-		$args['display_cb'] = 'sast_options_display_with_tabs';
-	}
-
-	$secondary_options = new_cmb2_box( $args );
-
-	$secondary_options->add_field( array(
-		'name'    => 'Test Radio',
-		'desc'    => 'field description (optional)',
-		'id'      => 'radio',
-		'type'    => 'radio',
-		'options' => array(
-			'option1' => 'Option One',
-			'option2' => 'Option Two',
-			'option3' => 'Option Three',
-		),
-	) );
-
-	/**
-	 * Registers tertiary options page, and set main item as parent.
-	 */
-	$args = array(
-		'id'           => 'sast_tertiary_options_page',
-		'menu_title'   => 'Tertiary Options', // Use menu title, & not title to hide main h2.
-		'object_types' => array( 'options-page' ),
-		'option_key'   => 'sast_tertiary_options',
-		'parent_slug'  => 'sast_main_options',
-		'tab_group'    => 'sast_main_options',
-		'tab_title'    => 'Tertiary',
-	);
-
-	// 'tab_group' property is supported in > 2.4.0.
-	if ( version_compare( CMB2_VERSION, '2.4.0' ) ) {
-		$args['display_cb'] = 'sast_options_display_with_tabs';
-	}
-
-	$tertiary_options = new_cmb2_box( $args );
-
-	$tertiary_options->add_field( array(
-		'name' => 'Test Text Area for Code',
-		'desc' => 'field description (optional)',
-		'id'   => 'textarea_code',
-		'type' => 'textarea_code',
-	) );
+    $general_options->add_field( array(
+        'name' => __('Footer Scripts', 'sast_block_theme'),
+        'id' => 'sast_scripts_footer_ind',
+        'type' => 'textarea_code',
+        'options' => array( 'disable_codemirror' => true ),
+    ) );
 
 }
-add_action( 'cmb2_admin_init', 'sast_register_main_options_metabox' );
+add_action( 'cmb2_admin_init', 'sast_register_theme_settings_metabox' );
 
 /**
  * A CMB2 options-page display callback override which adds tab navigation among
