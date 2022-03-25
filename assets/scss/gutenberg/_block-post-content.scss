@@ -1,0 +1,6 @@
+.wp-block-post-content {
+    > :not(.alignfull) {
+        padding-right: var(--wp--custom--mobile--gap);
+        padding-left: var(--wp--custom--mobile--gap);
+    }
+}
