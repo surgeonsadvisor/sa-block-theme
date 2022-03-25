@@ -28,7 +28,7 @@
                 {
                     "name": "color-2",
                     "slug": "color-2",
-                    "color": "#dddddd"
+                    "color": "#F2F0EC"
                 },
                 {
                     "name": "color-3",
@@ -54,7 +54,7 @@
         },
         "layout": {
 			"contentSize": "1200px",
-			"wideSize": "100%"
+			"wideSize": "1200px"
 		},
         "typography": {
             "dropCap": false,
@@ -76,23 +76,28 @@
                 }
             ],
             "fontSizes": [
-                {
+                {   
+                    "name": "Small",
                     "size": "14px",
                     "slug": "small"
                 },
-                {
+                {   
+                    "name": "Regular",
                     "size": "16px",
-                    "slug": "normal"
+                    "slug": "regular"
                 },
                 {
+                    "name": "Medium",
                     "size": "20px",
                     "slug": "medium"
                 },
                 {
+                    "name": "Large",
                     "size": "24px",
                     "slug": "large"
                 },
-                {
+                {   
+                    "name": "X-Large",
                     "size": "36px",
                     "slug": "x-large"
                 }
@@ -119,6 +124,39 @@
         }       
     },
     "styles": {
+        "blocks": {
+            "core/site-title": {
+                "elements": {
+                    "link": {
+                        "typography": {
+                            "textDecoration": "none"
+                        }
+                    }
+                }
+            },
+            "core/template-part": {
+                "spacing": {
+                    "margin": {
+                        "top": "0"
+                    }
+                }
+            },
+            "core/post-content": {
+                "spacing": {
+                    "margin": {
+                        "top": "0"
+                    }
+                }
+            },
+            "core/group": {
+                "spacing": {
+                    "margin": {
+                        "top": "0"
+                    }
+                }
+            }
+            
+        },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--open-sans)",
             "lineHeight": "var(--wp--custom--line-height--body)",
@@ -167,6 +205,11 @@
         {
             "name": "header",
             "title": "Header",
+            "area": "header"
+        },
+        {
+            "name": "header-centered-logo",
+            "title": "Header With Centered Logo",
             "area": "header"
         },
         {
