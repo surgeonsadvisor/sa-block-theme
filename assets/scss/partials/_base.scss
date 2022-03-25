@@ -12,8 +12,12 @@ body {
     }
 }
 
-main {
+main{
     @include clearFloat;
+
+    @media only screen and ( max-width: 1024px ) {
+        margin-top: 48px !important;
+    }
 }
 
 figure {

@@ -1,6 +1,6 @@
 <?php
 
-define( "SA_BLOCK_THEME_VERSION", "0.1.0" );
+define( "SA_BLOCK_THEME_VERSION", "0.1.1" );
 
 if ( ! function_exists( 'sast_theme_setup' ) ) :
     /**
