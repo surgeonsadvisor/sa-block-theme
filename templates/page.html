@@ -2,16 +2,30 @@
 <!-- wp:template-part { "slug":"header","tagName":"header", "className":"site-header" } /-->
 
 <!-- wp:group {"tagName":"main","className":"content"} -->
-<main class="wp-block-group content"><!-- wp:group {"tagName":"article"} -->
-<article class="wp-block-group"><!-- wp:group {"tagName":"header","style":{"spacing":{"padding":{"left":"var(--wp--custom--mobile--gap)","right":"var(--wp--custom--mobile--gap)"}}},"className":"entry-header", "align": "full", "layout": {"inherit":true}} -->
-<header class="wp-block-group entry-header alignfull" style="padding-right:var(--wp--custom--mobile--gap);padding-left:var(--wp--custom--mobile--gap)"><!-- wp:post-title {"level":1, "style": {"spacing": {"margin": {"top": "var(--wp--style--block-gap)","bottom": "var(--wp--style--block-gap)"}}}} /--></header>
+<main class="wp-block-group content">
+
+<!-- wp:group {"tagName":"article"} -->
+<article class="wp-block-group">
+
+<!-- wp:group {"tagName":"header","style":{"spacing":{"padding":{"left":"var(--wp--custom--mobile--gap)","right":"var(--wp--custom--mobile--gap)"}}},"className":"entry-header", "align": "full", "layout": {"inherit":true}} -->
+<header class="wp-block-group entry-header alignfull" style="padding-right:var(--wp--custom--mobile--gap);padding-left:var(--wp--custom--mobile--gap)">
+    
+<!-- wp:post-title {"level":1, "style": {"spacing": {"margin": {"top": "var(--wp--style--block-gap)","bottom": "var(--wp--style--block-gap)"}}}} /-->
+
+</header>
 <!-- /wp:group -->
 
-<!-- wp:group -->
 <!-- wp:post-content {"layout":{"inherit":true} } /-->
-<!-- /wp:group --></article>
-<!-- /wp:group --></main>
+
+</article>
 <!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:spacer {"height":"var(--wp--style--block-gap)"} -->
+<div style="height:var(--wp--style--block-gap)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
 <!-- wp:template-part {"slug":"before-footer", "className": "before-footer"} /-->
 <!-- wp:template-part {"slug":"footer","tagName":"footer", "className": "site-footer"} /-->

@@ -154,17 +154,10 @@
                     }
                 }
             },
-            "core/post-content": {
+            "core/paragraph": {
                 "spacing": {
                     "margin": {
-                        "top": "0"
-                    }
-                }
-            },
-            "core/group": {
-                "spacing": {
-                    "margin": {
-                        "top": "0"
+                        "bottom": "var(--wp--style--block-gap)"
                     }
                 }
             }
