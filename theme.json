@@ -160,8 +160,7 @@
                         "bottom": "var(--wp--style--block-gap)"
                     }
                 }
-            }
-            
+            }            
         },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--open-sans)",
