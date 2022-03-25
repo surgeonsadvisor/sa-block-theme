@@ -54,7 +54,7 @@
         },
         "layout": {
 			"contentSize": "1200px",
-			"wideSize": "1200px"
+			"wideSize": "1366px"
 		},
         "typography": {
             "dropCap": false,
