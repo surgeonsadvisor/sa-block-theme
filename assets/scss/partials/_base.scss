@@ -1,11 +1,9 @@
-body {
+body {  
 
-    --wp--custom--typography--font-size--heading-1: 36px;
-    --wp--custom--typography--font-size--heading-2: 28px;
-    --wp--custom--typography--font-size--heading-3: 24px;
-
-    
     @media only screen and ( max-width: 1024px ) {
+        --wp--custom--typography--font-size--heading-1: 36px;
+        --wp--custom--typography--font-size--heading-2: 28px;
+        --wp--custom--typography--font-size--heading-3: 24px;
 
         &.is-active {
             overflow: hidden;    
