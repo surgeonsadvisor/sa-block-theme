@@ -8,12 +8,7 @@ body {
 }
 
 main {
-    @include containerPadding( $vPaddingMobile:0, $vPaddingDesktop: 0 );
     @include clearFloat;
-    @media only screen and ( max-width: 1024px ) {
-        margin-top: calc( 48px + var(--wp--style--block-gap) ) !important;
-    }
-
 }
 
 figure {
