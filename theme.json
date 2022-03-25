@@ -110,7 +110,7 @@
                 "vh",
                 "vw",
                 "%"
-            ]
+            ]            
         },
         "custom": {
             "lineHeight": {
@@ -130,6 +130,9 @@
                     "heading-5": "20px",
                     "heading-6": "16px"                    
                 }
+            },
+            "mobile": {
+                "gap": "5%"
             }
         }       
     },
