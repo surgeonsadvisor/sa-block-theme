@@ -1,0 +1,23 @@
+.wp-block-cover {
+
+    &.has-parallax,
+    &.is-repeated {
+        &.hide-on-mobile {
+            @media only screen and ( max-width: 480px ) {
+                background-image: none !important;
+            }
+        }
+    }
+
+    &.hide-on-mobile {
+        @media only screen and ( max-width: 480px) {
+            .wp-block-cover__image-background {
+                display: none;
+            }
+            .wp-block-cover__gradient-background,
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
