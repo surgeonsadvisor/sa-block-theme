@@ -45,7 +45,8 @@ add_action( 'wp_enqueue_scripts', 'sast_theme_styles_scripts' );
 function sast_theme_customize_gutenberg_blocks() {
 
     wp_enqueue_style( 'sast-button-blocks-extended', get_stylesheet_directory_uri() . '/dist/admin.css',  array( ), SA_BLOCK_THEME_VERSION, null );
-    wp_enqueue_style('sast-button-blocks-extended', get_stylesheet_directory_uri() . '/admin/gutenberg/block-button/block-button.js', array( 'wp-blocks', 'wp-dom' ), SA_BLOCK_THEME_VERSION, true);
+    wp_enqueue_style( 'sast-button-blocks-extended', get_stylesheet_directory_uri() . '/admin/gutenberg/block-button/block-button.js', array( 'wp-blocks', 'wp-dom' ), SA_BLOCK_THEME_VERSION, true);
+    wp_enqueue_style( 'sast-cover-blocks-extended', get_stylesheet_directory_uri() . '/admin/gutenberg/block-cover/dist/block-cover-extended.js', array( 'wp-blocks', 'wp-dom' ), SA_BLOCK_THEME_VERSION, true);
 	
 }
 add_action( 'enqueue_block_editor_assets', 'sast_theme_customize_gutenberg_blocks' );
