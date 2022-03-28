@@ -167,7 +167,15 @@
                         "bottom": "var(--wp--style--block-gap)"
                     }
                 }
-            }    
+            },
+            "core/group": {
+                "spacing": {
+                    "margin": {
+                        "top": "0",
+                        "bottom": "0"
+                    }
+                }
+            }  
         },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--open-sans)",
