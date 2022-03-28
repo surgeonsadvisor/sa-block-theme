@@ -160,7 +160,14 @@
                         "bottom": "var(--wp--style--block-gap)"
                     }
                 }
-            }            
+            },
+            "core/post-featured-image": {
+                "spacing": {
+                    "margin": {
+                        "bottom": "var(--wp--style--block-gap)"
+                    }
+                }
+            }    
         },
         "typography": {
             "fontFamily": "var(--wp--preset--font-family--open-sans)",
