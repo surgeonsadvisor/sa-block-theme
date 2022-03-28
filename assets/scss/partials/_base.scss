@@ -1,19 +1,23 @@
-body {
-    &.is-active {
+body {  
 
-        @media only screen and ( max-width: 1024px ) {
-            overflow: hidden;
-        }       
+    @media only screen and ( max-width: 1024px ) {
+        --wp--custom--typography--font-size--heading-1: 36px;
+        --wp--custom--typography--font-size--heading-2: 28px;
+        --wp--custom--typography--font-size--heading-3: 24px;
+
+        &.is-active {
+            overflow: hidden;    
+        }
+
     }
 }
 
-main {
-    @include containerPadding( $vPaddingMobile:0, $vPaddingDesktop: 0 );
+main{
     @include clearFloat;
-    @media only screen and ( max-width: 1024px ) {
-        margin-top: calc( 48px + var(--wp--style--block-gap) ) !important;
-    }
 
+    @media only screen and ( max-width: 1024px ) {
+        margin-top: 48px !important;
+    }
 }
 
 figure {

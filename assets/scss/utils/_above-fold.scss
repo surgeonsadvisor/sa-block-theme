@@ -1,0 +1,46 @@
+.above-fold {
+
+    .yoast-breadcrumbs {
+        position: absolute;
+        top: 0;
+    }
+
+    h1, h2 {
+        margin-bottom: 0;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 10px;
+        
+    }
+
+    p {
+        margin-top: 40px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    @media only screen and ( max-width: 480px ) {
+        min-height: calc(100vh - 48px) !important;
+
+        .wp-block-buttons {
+            .wp-block-button {
+                width: 100%;
+    
+                > .wp-block-button__link {
+                    width: 100%;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+        }        
+    }        
+}

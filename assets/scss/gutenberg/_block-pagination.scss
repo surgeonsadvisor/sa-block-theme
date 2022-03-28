@@ -5,6 +5,7 @@
 .wp-block-query-pagination {
     @include clearFloat;
     margin: 40px 0;
+    gap: 0;
     
     .page-numbers,
     .wp-block-query-pagination-next,

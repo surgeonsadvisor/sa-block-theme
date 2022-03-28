@@ -1,0 +1,5 @@
+.wp-block-post-content {
+    > :not(.alignfull) {
+        width: calc( 100% - (var( --wp--custom--mobile--gap ) * 2 ) );
+    }
+}
