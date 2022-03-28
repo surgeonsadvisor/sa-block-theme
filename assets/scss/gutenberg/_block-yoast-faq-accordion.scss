@@ -1,0 +1,47 @@
+.yoast-faq-accordion {
+    margin-bottom: 1.8em;
+
+    .schema-faq-question {
+        display: block;
+        color: #444;
+        background-color: #eee;
+        padding: .5em 1em;
+        border-top: 2px solid #fff;
+        cursor: pointer;
+        position: relative;
+
+        .schema-faq-button {
+            all: inherit;
+            border: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 1.8em 0 0;
+
+            svg {
+                height: 1.8em;
+                width: 1.8em;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: transform .8s ease;            
+            }            
+        }
+
+        [aria-expanded="true"] {
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    .schema-faq-answer {
+        padding: 1em;
+        border: 1px solid #ddd;
+        margin: 0 0 .5em 0;
+    }
+
+    + .yoast-faq-accordion {
+        margin-top: -1.8em;
+    }
+
+} 

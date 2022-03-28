@@ -1,0 +1,19 @@
+.yoast-breadcrumbs {
+    padding: 15px 0;
+    font-size: small;
+    color: var(--wp--preset--color--black);
+    
+    a {
+        text-decoration: none;
+        border-bottom: 0;
+        color: var(--wp--preset--color--black);
+    }
+
+    .breadcrumb_last {
+        font-weight: 700;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
