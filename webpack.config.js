@@ -6,7 +6,9 @@ module.exports = {
     entry: [
         './assets/js/mobile-menu.js',
         './assets/scss/main.scss',
-        './assets/scss/admin.scss'
+        './assets/scss/admin.scss',
+        './assets/scss/fonts/mobile-fonts.scss',
+        './assets/scss/fonts/desktop-fonts.scss'
     ],
     output: {
         filename: 'mobile-menu.js',
