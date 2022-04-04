@@ -20,8 +20,10 @@ if ( ! function_exists( 'sast_theme_setup' ) ) :
  
         add_theme_support( 'wp-block-styles' );
     }
+
+    add_action( 'after_setup_theme', 'sast_theme_setup' );
 endif;
-add_action( 'after_setup_theme', 'sast_theme_setup' );
+
 
 /**
  * Enqueue theme scripts and styles.
@@ -62,6 +64,9 @@ include_once( __DIR__.'/inc/theme-settings/functions.php' );
 include_once( __DIR__.'/inc/theme-settings/theme-options.php' );
 include_once( __DIR__.'/inc/theme-settings/page-options.php' );
 
+
+//* Patterns
+include_once( __DIR__.'/inc/block-patterns.php' );
 
 /**
  * Disable the emoji's
