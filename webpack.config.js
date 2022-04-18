@@ -42,7 +42,17 @@ module.exports = {
                         loader: "extract-loader"
                     },
                     {
-                        loader: "css-loader"
+                        loader: "css-loader",
+                        options: {
+                          url: {
+                            filter: (url) => {
+                              if (/^data:(image|font)/i.test(url)) {
+                                return false;
+                              }
+                              return true;
+                            },
+                          },
+                        }
                     },
                     {
                         loader: "sass-loader"

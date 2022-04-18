@@ -55,6 +55,20 @@ function sast_theme_customize_gutenberg_blocks() {
 add_action( 'enqueue_block_editor_assets', 'sast_theme_customize_gutenberg_blocks' );
 
 
+/**
+ * 
+ * Register styles and scripts for the shortcodes in the theme
+ * 
+ */
+function sast_theme_register_style_scripts() {
+
+    wp_register_style( 'sast-lazyload-youtube', get_stylesheet_directory_uri().'/assets/libs/lazy-load-youtube/style.css', array(), SA_BLOCK_THEME_VERSION );
+    wp_register_script( 'sast-lazyload-youtube', get_stylesheet_directory_uri().'/assets/libs/lazy-load-youtube/script.js', array(), SA_BLOCK_THEME_VERSION, true );
+
+}
+add_action( 'wp_enqueue_scripts', 'sast_theme_register_style_scripts' );    
+
+
 //* CMB2
 if ( file_exists( __DIR__.'/vendor/cmb2/init.php' ) ) {
     require_once __DIR__.'/vendor/cmb2/init.php';
@@ -64,6 +78,7 @@ include_once( __DIR__.'/inc/theme-settings/functions.php' );
 include_once( __DIR__.'/inc/theme-settings/theme-options.php' );
 include_once( __DIR__.'/inc/theme-settings/page-options.php' );
 include_once( __DIR__.'/inc/shortcodes/shortcode-privacy.php' );
+include_once( __DIR__.'/inc/shortcodes/shortcode-youtube.php' );
 
 //* Patterns
 include_once( __DIR__.'/inc/block-patterns.php' );
